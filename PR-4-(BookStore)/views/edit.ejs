@@ -30,7 +30,14 @@
     <body>
         <div class="container mt-5">
             <h2 class="text-center">Edit Book</h2>
+            
+            <!-- Display Book ID -->
+            
+
             <form action="/updateBook/<%= book._id %>" method="POST">
+                <div class="mb-3 text-center">
+                    <p class="fw-bold fs-4 d-none">Book ID: <%= book._id %></p>
+                </div>
                 <div class="mb-3">
                     <label for="name" class="form-label">Book Name</label>
                     <input type="text" class="form-control" id="name"

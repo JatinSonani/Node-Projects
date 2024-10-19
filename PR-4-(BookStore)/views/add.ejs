@@ -11,7 +11,7 @@
     </head>
     <style>
         body {
-            background-image: url(https://wallpapers.com/images/featured/book-5q6xbfxwtbme5kaj.jpg);
+            background-image: url(https://marketplace.canva.com/EAE5LpS1cKA/1/0/1600w/canva-beige-reading-book-motivational-desktop-wallpaper-KEmFgDG0z8M.jpg);
             background-size: cover; 
             background-position: center; 
             background-repeat: no-repeat; 
@@ -68,14 +68,12 @@
                     </div>
 
                     <div class="mb-3 text-center">
-                        <button type="submit" class="btn btn-primary mt-3 fs-5 fw-bold px-4 py-2 ">Add
+                        <button type="submit"
+                            class="btn btn-primary mt-3 fs-5 fw-bold px-4 py-2 ">Add
                             Book</button>
                     </div>
                 </div>
             </form>
-
-            <!-- Book List -->
-
             <h3 class="text-center mt-5 fw-bold">Book List</h3>
             <div class="row justify-content-center">
                 <div class="col-md-8">
@@ -97,9 +95,8 @@
                                 <td><%= book.book_pages %></td>
                                 <td><%= book.book_author %></td>
                                 <td>
-
                                     <a href="/deleteRecord/<%= book._id %>"
-                                        class="btn btn-danger btn-sm">Delete</a>
+                                        class="btn btn-danger btn-sm ">Delete</a>
                                     <a href="/editRecord/<%= book._id %>"
                                         class="btn btn-warning btn-sm">Edit</a>
                                 </td>
