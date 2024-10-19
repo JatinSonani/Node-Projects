@@ -111,8 +111,7 @@ app.get('/add', (req, res) => {
 
 app.listen(port, (err) => {
     if (err) {
-        console.log("err");
-        
+        console.log("err");        
     }
     console.log(`app is running on port :- ${port}`);
 })
