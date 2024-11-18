@@ -37,51 +37,27 @@ const adddata = async (req, res) => {
     }
 }
 
-
-// const deletedata= async (req, res)=>{
-//     try {
-//         const id=req.query.id
-
-//         let singal=await usersmodel.findById(id)
-//         fs.unlinkSync(singal.image)
-
-
-//         await usersmodel.findByIdAndDelete(id)
-
-//         return res.redirect('views')
-
-
-//     } catch (error) {
-//         console.log(error);
-//         return false
-//     }
-// }
-
 const deletedata = async (req, res) => {
     try {
         const { id } = req.query;
 
-        // Find the record by ID
         const record = await usersmodel.findById(id);
         if (!record) {
             console.error("Record not found");
             return res.status(404).send("Record not found");
         }
 
-        // Attempt to delete the associated image
         try {
             if (record.image && fs.existsSync(record.image)) {
-                fs.unlinkSync(record.image); // Delete the image file
+                fs.unlinkSync(record.image); 
             }
         } catch (error) {
             console.error("Error deleting image:", error);
             return res.status(500).send("Error deleting image");
         }
 
-        // Delete the record from the database
         await usersmodel.findByIdAndDelete(id);
 
-        // Redirect to the views page
         return res.redirect('/');
     } catch (error) {
         console.error("Error deleting record:", error);
@@ -104,13 +80,7 @@ const edit = async (req, res) => {
         console.log(error);
         return false
     }
-
-
 }
-
-
-
-
 const update = async (req, res) => {
     try {
         const { editid, name, desc, price } = req.body;
