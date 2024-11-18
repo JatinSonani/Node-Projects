@@ -22,7 +22,6 @@ routes.get('/views',viewpage)
 routes.post('/insert',upload ,adddata)
 routes.get('/delete',deletedata)
 routes.get('/edit',edit)
-// routes.post('/update',upload,up)
 
 routes.post('/update',upload,update)
 module.exports=routes
