@@ -11,7 +11,13 @@
         <link rel="stylesheet"
             href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
     </head>
-
+    <style>
+         body{
+    background-image: url(https://assets.nflxext.com/ffe/siteui/vlv3/03ad76d1-e184-4d99-ae7d-708672fa1ac2/web/IN-en-20241111-TRIFECTA-perspective_149877ab-fcbd-4e4f-a885-8d6174a1ee81_large.jpg);
+    width: 100%;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        }
+    </style>
     <body class="bg-dark text-light">
         <header class="py-4 bg-primary text-center">
             <h1 class="display-4 fw-bold">
@@ -20,7 +26,6 @@
             <p class="lead">Your Go-To Platform for Movies About Tech &
                 Innovation</p>
         </header>
-
         <div class="container my-5">
             <div class="row row-cols-1 row-cols-md-3 g-4">
                 <% users.map((val, i) => { %>
@@ -45,7 +50,6 @@
                 <% }) %>
             </div>
         </div>
-
         <footer class="py-4 bg-primary text-center">
             <p class="mb-0">© 2024 StreamHub. All Rights Reserved.</p>
         </footer>
