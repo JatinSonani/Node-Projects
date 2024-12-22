@@ -49,13 +49,13 @@ const email = async (req, res) => {
     var transporter = nodemailer.createTransport({
       service: "gmail",
       auth: {
-        user: "jatin5049@gmail.com",
-        pass: "zftfhknfsclfdvya",
+        user: "sonani5049@gmail.com",
+        pass: "yelg idtu buxq vmhr",
       },
     });
 
     var mailOptions = {
-      from: "jatin5049@gmail.com",
+      from: "sonani5049@gmail.com",
       to: email,
       subject: "Sending Email using Node.js",
       html: `

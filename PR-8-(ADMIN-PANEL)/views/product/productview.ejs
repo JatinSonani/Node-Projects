@@ -6,12 +6,12 @@
   <div class="page-breadcrumb">
       <div class="row align-items-center">
           <div class="col-md-6 col-8 align-self-center">
-              <h3 class="page-title mb-0 p-0">Category</h3>
+              <h3 class="page-title mb-0 p-0">Product</h3>
               <div class="d-flex align-items-center">
                   <nav aria-label="breadcrumb">
                       <ol class="breadcrumb">
                           <li class="breadcrumb-item"><a href="/dash">Home</a></li>
-                          <li class="breadcrumb-item active" aria-current="page">Category</li>
+                          <li class="breadcrumb-item active" aria-current="page">Product</li>
                       </ol>
                   </nav>
               </div>
@@ -39,7 +39,7 @@
           <div class="col-sm-12">
               <div class="card">
                   <div class="card-body">
-                      <h4 class="card-title">Category</h4>
+                      <h4 class="card-title">Product</h4>
                       <div class="table-responsive">
                           <table class="table user-table">
                               <thead>
@@ -67,7 +67,7 @@
                                   <td><%=exsubcat?.price%></td>
                                   <td><%=exsubcat?.desc%></td>
                                   <td>
-                                    <img src= " ../<%=exsubcat.image %>" width="100" />
+                                    <img src= "../<%=exsubcat.image %>" width="100" />
                                   </td>
                                   <td>
                                     <a class="btn btn-primary" href="/product/productedit?id=<%=exsubcat.id%>">edit</a>

@@ -82,43 +82,43 @@ try {
 }
 
 const updateproduct=async (req, res)=>{
-try {
-    const {editid, category, subcategory, exsubcategory, product, desc, price} = req.body;
-    
-    if (req.file) {
-        const single = await productmodels.findById(editid)
-        fs.unlinkSync(single.image)
-        await productmodels.findByIdAndUpdate(editid,{
-            categoryid : category,
-            subcategoryid : subcategory,
-            exsubcategoryid : exsubcategory,
-            product : product,
-            desc : desc,
-            price : price,
-            image : req.file.path,
-        })
+    try {
+        const {editid, category, subcategory, exsubcategory, product, desc, price} = req.body;
         
-        return res.redirect('/product/productpage')
-    } else {
-        const single = await productmodels.findById(editid)
-
-        await productmodels.findByIdAndUpdate(editid,{
-            categoryid : category,
-            subcategoryid : subcategory,
-            exsubcategoryid : exsubcategory,
-            product : product,
-            desc : desc,
-            price : price,
-            image : single.image
-        })
-        return res.redirect('/product/productpage')
-    }
-
-} catch (error) {
-    console.log(error);
+        if (req.file) {
+            const single = await productmodels.findById(editid)
+            fs.unlinkSync(single.image)
+            await productmodels.findByIdAndUpdate(editid,{
+                categoryid : category,
+                subcategoryid : subcategory,
+                exsubcategoryid : exsubcategory,
+                product : product,
+                desc : desc,
+                price : price,
+                image : req.file.path,
+            })
+            
+            return res.redirect('/product/productpage')
+        } else {
+            const single = await productmodels.findById(editid)
     
-}
-}
+            await productmodels.findByIdAndUpdate(editid,{
+                categoryid : category,
+                subcategoryid : subcategory,
+                exsubcategoryid : exsubcategory,
+                product : product,
+                desc : desc,
+                price : price,
+                image : single.image
+            })
+            return res.redirect('/product/productpage')
+        }
+    
+    } catch (error) {
+        console.log(error);
+        
+    }
+    }
 
 const ajaxcategory=async(req,res)=>{
     try {

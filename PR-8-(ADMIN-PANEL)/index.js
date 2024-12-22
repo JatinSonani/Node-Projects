@@ -17,7 +17,7 @@ app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 constdb = require('./config/db');
 const passport = require('passport');
 
-const passportlocal = require('./config/paaportlocal');
+const passportlocal = require('./config/passportLocal');
 
 const session = require('express-session');
 

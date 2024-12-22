@@ -1,12 +1,12 @@
 const passport=require('passport')
 
 
-const paaportlocal=require('passport-local').Strategy
+const passportLocal=require('passport-local').Strategy
 
 const usermodels=require('../models/usermodels')
 
 
-passport.use(new paaportlocal({
+passport.use(new passportLocal({
     usernameField: 'email',
 }, async (email, password, done) => {
     try {
