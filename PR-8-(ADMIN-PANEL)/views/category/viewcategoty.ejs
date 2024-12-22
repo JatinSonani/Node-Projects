@@ -1,0 +1,105 @@
+<%- include('../header') %>
+<div class="page-wrapper">
+  <!-- ============================================================== -->
+  <!-- Bread crumb and right sidebar toggle -->
+  <!-- ============================================================== -->
+  <div class="page-breadcrumb">
+      <div class="row align-items-center">
+          <div class="col-md-6 col-8 align-self-center">
+              <h3 class="page-title mb-0 p-0">Category</h3>
+              <div class="d-flex align-items-center">
+                  <nav aria-label="breadcrumb">
+                      <ol class="breadcrumb">
+                          <li class="breadcrumb-item"><a href="/dash">Home</a></li>
+                          <li class="breadcrumb-item active" aria-current="page">Category</li>
+                      </ol>
+                  </nav>
+              </div>
+          </div>
+          <div class="col-md-6 col-4 align-self-center">
+              <div class="text-end upgrade-btn">
+                  <a href="/category/categoryPage"
+                      class="btn btn-danger d-none d-md-inline-block text-white" target="_blank">Add New Category</a>
+              </div>
+          </div>
+      </div>
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Bread crumb and right sidebar toggle -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- Container fluid  -->
+  <!-- ============================================================== -->
+  <div class="container-fluid">
+      <!-- ============================================================== -->
+      <!-- Start Page Content -->
+      <!-- ============================================================== -->
+      <div class="row">
+          <!-- column -->
+          <div class="col-sm-12">
+              <div class="card">
+                  <div class="card-body">
+                      <h4 class="card-title">Category</h4>
+                      <div class="table-responsive">
+                          <table class="table user-table">
+                              <thead>
+                                  <tr>
+                                      <th class="border-top-0">#</th>
+                                      <th class="border-top-0">Category</th>
+                                      <th class="border-top-0">action</th>
+                                      <th class="border-top-0">Status</th>
+                                  </tr>
+                              </thead>
+                              <tbody>
+                                <% users.map((val, i)=>{%>
+
+                                  <tr>
+                                      <td><%= ++i %></td>
+                                      <td><%= val.category %></td>
+                                      <td>
+                                          <a class="btn btn-danger ms-2" href="/category/categoryedit?id=<%=val.id%>">Edit</a>
+                                        <a class="btn btn-primary" href="/category/categorydelete?id=<%=val.id%>">delete</a>
+                                      </td>
+              
+                                      <td>
+                                        <% if(val.status == "active"){%>
+                                          <a href="/category/changeStatus?id=<%= val.id%>&status=<%= val.status %>" class=" btn btn-success"> active  </a>
+                                          <% }else{%>
+                                            <a href="/category/changeStatus?id=<%= val.id%>&status=<%= val.status %>" class=" btn btn-warning"> deactive  </a>
+              
+                                        <% }%>
+                                    
+                                      </td>
+                                  </tr>
+                              <%   }) %>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <!-- ============================================================== -->
+      <!-- End PAge Content -->
+      <!-- ============================================================== -->
+      <!-- ============================================================== -->
+      <!-- Right sidebar -->
+      <!-- ============================================================== -->
+      <!-- .right-sidebar -->
+      <!-- ============================================================== -->
+      <!-- End Right sidebar -->
+      <!-- ============================================================== -->
+  </div>
+  <!-- ============================================================== -->
+  <!-- End Container fluid  -->
+  <!-- ============================================================== -->
+  <!-- ============================================================== -->
+  <!-- footer -->
+  <!-- ============================================================== -->
+  <footer class="footer"> © 2021 Material Pro Admin by <a href="https://www.wrappixel.com/">wrappixel.com </a>
+  </footer>
+  <!-- ============================================================== -->
+  <!-- End footer -->
+  <!-- ============================================================== -->
+</div>
+<%- include('../footer') %>
