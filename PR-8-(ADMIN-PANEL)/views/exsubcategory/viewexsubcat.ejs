@@ -56,9 +56,9 @@
                                 <% exsucategory.map((exsubcat,i)=>{%>
                                   <tr>
                                     <td> <%= ++i%> </td>
-                                  <td><%=exsubcat.categoryid.category%></td>
-                                  <td><%=exsubcat.subcategoryid.subcategory%></td>
-                                  <td><%=exsubcat.exsubcategory%></td>
+                                  <td><%=exsubcat?.categoryid?.category%></td>
+                                  <td><%=exsubcat?.subcategoryid?.subcategory%></td>
+                                  <td><%=exsubcat?.exsubcategory%></td>
                                   <td>
                                     <a class="btn btn-primary" href="/exsubcategory/exsubcategoryedit?id=<%=exsubcat.id%>">edit</a>
                                     <a class="btn btn-danger" href="/exsubcategory/exsubcategorydelete?id=<%=exsubcat.id%>">delete</a>

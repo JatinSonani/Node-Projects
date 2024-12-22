@@ -60,12 +60,12 @@
                                 <% exsucategory.map((exsubcat,i)=>{%>
                                   <tr>
                                     <td> <%= ++i%> </td>
-                                  <td><%=exsubcat.categoryid.category%></td>
-                                  <td><%=exsubcat.subcategoryid.subcategory%></td>
-                                  <td><%=exsubcat.exsubcategoryid.exsubcategory%></td>
-                                  <td><%=exsubcat.product%></td>
-                                  <td><%=exsubcat.price%></td>
-                                  <td><%=exsubcat.desc%></td>
+                                  <td><%=exsubcat?.categoryid?.category%></td>
+                                  <td><%=exsubcat?.subcategoryid?.subcategory%></td>
+                                  <td><%=exsubcat?.exsubcategoryid?.exsubcategory%></td>
+                                  <td><%=exsubcat?.product%></td>
+                                  <td><%=exsubcat?.price%></td>
+                                  <td><%=exsubcat?.desc%></td>
                                   <td>
                                     <img src= " ../<%=exsubcat.image %>" width="100" />
                                   </td>
